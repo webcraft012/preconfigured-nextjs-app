@@ -12,13 +12,19 @@ const nextConfig = {
   //       headers: [
   //         {
   //           key: "Content-Security-Policy",
-  //           // For development, we'll allow both http and https for easier testing
-  //           value: "frame-ancestors 'self' http: https:;",
+  //           value: "frame-ancestors 'self' *; frame-src 'self' *;",
   //         },
-  //         // Add this header to ensure proper loading in dev mode
   //         {
-  //           key: "X-Frame-Options",
-  //           value: "ALLOW-FROM http:",
+  //           key: "Access-Control-Allow-Origin",
+  //           value: "*",
+  //         },
+  //         {
+  //           key: "Cross-Origin-Opener-Policy",
+  //           value: "same-origin-allow-popups",
+  //         },
+  //         {
+  //           key: "Cross-Origin-Embedder-Policy",
+  //           value: "credentialless",
   //         },
   //       ],
   //     },
