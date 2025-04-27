@@ -3,6 +3,10 @@
 
 node_modules/
 
+/repomix
+
+repomix/
+
 /.pnp
 .pnp.js
 
