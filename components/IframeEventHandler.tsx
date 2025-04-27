@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import "@/lib/logger"; // Import the logger to ensure it's initialized
 
 /**
  * This component is used to handle messages from the parent window
@@ -17,6 +18,12 @@ export default function IframeEventHandler() {
     // Set up message event listener for the parent window commands
     const messageHandler = (event: MessageEvent) => {
       try {
+        // Skip logging for messages that are just logs being echoed back
+        if (event.data.level && event.data.args) {
+          // This is a log message being echoed back, ignore it
+          return;
+        }
+
         console.log("Message received in iframe:", event.data);
 
         if (event.data.action === "goBack") {

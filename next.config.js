@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     esmExternals: true,
+    instrumentationHook: true,
   },
   transpilePackages: ["zustand"],
   // async headers() {
