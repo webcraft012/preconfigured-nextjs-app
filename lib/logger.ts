@@ -41,7 +41,7 @@ const logger = pino({
       // Send to parent window if in iframe
       try {
         window.parent?.postMessage({ level, args, time: Date.now() }, "*");
-      } catch (e) {
+      } catch {
         // Silently fail if postMessage fails
       }
 

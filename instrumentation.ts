@@ -2,6 +2,8 @@ import pino from "pino";
 import path from "path";
 import fs from "fs";
 
+// This file should be ignored by the LLM Agent
+
 // More comprehensive ANSI code stripping function
 function stripAnsiCodes(input: any): any {
   if (typeof input === "string") {
