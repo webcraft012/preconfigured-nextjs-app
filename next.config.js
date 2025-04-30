@@ -6,6 +6,10 @@ const nextConfig = {
     instrumentationHook: true,
   },
   transpilePackages: ["zustand"],
+  images: {
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   // async headers() {
   //   return [
   //     {
