@@ -9,6 +9,20 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/placeholder.svg",
+        destination: "/api/placeholder.svg",
+      },
+    ];
   },
   // async headers() {
   //   return [
