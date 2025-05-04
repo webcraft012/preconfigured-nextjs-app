@@ -6,7 +6,8 @@
     "dev": "nodemon --exec next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix",
+    "lint:next": "next lint --fix --dir . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern \"eslint-config-next/**\" --format ./eslint-relative-formatter.js --fix",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
@@ -38,6 +39,9 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5"
+    "typescript": "^5",
+    "eslint-plugin-nextjs-custom-rules": "file:./eslint-plugin-nextjs-custom-rules",
+    "eslint-config-next-custom": "file:./eslint-config-next",
+    "chalk": "^4.1.2"
   }
 }

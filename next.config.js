@@ -24,6 +24,11 @@ const nextConfig = {
       },
     ];
   },
+  // Configure ESLint with our custom rule
+  eslint: {
+    // Allow custom ESLint configurations
+    ignoreDuringBuilds: false,
+  },
   // async headers() {
   //   return [
   //     {

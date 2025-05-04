@@ -1,0 +1,12 @@
+{
+  "name": "eslint-plugin-nextjs-custom-rules",
+  "version": "0.1.0",
+  "description": "Custom ESLint rules for Next.js",
+  "main": "index.js",
+  "author": "User",
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "eslint": ">=7.0.0"
+  }
+}
